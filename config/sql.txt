@@ -1,0 +1,20 @@
+-- Table: public.tb_projects
+
+-- DROP TABLE IF EXISTS public.tb_projects;
+
+CREATE TABLE IF NOT EXISTS public.tb_projects
+(
+    id integer NOT NULL DEFAULT nextval('tb_projects_id_seq'::regclass),
+    project_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    start_date character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    end_date character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    description text COLLATE pg_catalog."default" NOT NULL,
+    image character varying COLLATE pg_catalog."default",
+    technologies character varying[] COLLATE pg_catalog."default",
+    CONSTRAINT tb_projects_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.tb_projects
+    OWNER to postgres;

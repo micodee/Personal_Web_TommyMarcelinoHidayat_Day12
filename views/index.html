@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/public/img/favicon.ico" type="image/x-icon" />
+    <!-- css component home -->
+    <style> 
+      .bg-subtitle {
+        color: #898585;
+      }
+      .card-project:hover a {
+        color: orangered !important;
+      }
+    </style>
+    <!-- global css eksternal -->
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <!-- icon font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <!-- link bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>{{.Data.Title}}</title>
+  </head>
+  <body class="bg-bodyset">
+    <!-- component navbar -->
+    <nav class="shadow navbar navbar-expand-lg bg-nav fixed-top">
+      <div class="container p-lg-0">
+        <a class="navbar-brand me-5" href="/"
+          ><img src="./public/img/logo.png" alt=""
+        /></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item me-4">
+              <a
+                class="nav-link fw-bold active"
+                aria-current="page"
+                href="/"
+                >Home</a
+              >
+            </li>
+            {{ if .Data.IsLogin }}
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="/addProject"
+                >Add Project</a
+              >
+            </li>
+            {{ end }}
+          </ul>
+          
+          {{ if .Data.IsLogin }}
+          <a href="#" class="fw-semibold me-4">Hi, {{ .Data.UserName }}</a>
+          <a href="/logout" class="fw-semibold me-5">Logout</a>
+          {{ else }}
+          <a href="/register" class="fw-semibold me-4">Register</a>
+          <a href="/login" class="fw-semibold me-5">Login</a>
+          {{ end }}
+          <div class="contact">
+            <a href="/contact" class="btn-black fw-semibold rounded-2 ps-3 pe-3 pt-1 pb-1">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    {{if $.Data.FlashData}}
+    <div class="alert alert-success text-center fixed-top" style="margin-top: 3.5rem !important;" role="alert">
+      {{$.Data.FlashData}}
+    </div>
+    {{ end }}
+
+    <!-- profile  -->
+    <div class="d-flex justify-content-center align-items-center mt-5 pb-5">
+      <div class="shadow container me-4 ms-4 bg-layout rounded-2 p-lg-5 p-2 pt-4 row d-flex justify-content-center align-items-center mt-5 pb-5">
+        
+        <div class="col-md-9 pe-lg-5">
+          <h3 class="fw-bold">Hi Welcome to my hut</h3>
+          <p style="text-align: justify;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            qui tenetur modi fugit quo aliquid, itaque et, mollitia perferendis
+            tempora enim ipsum aliquam magni nemo ipsam ullam. Sapiente ipsum
+            veniam voluptatum eaque quas, ipsam iste illo, eligendi quisquam
+            modi possimus! Hic corrupti ipsum, alias vel perferendis aperiam!
+            Molestias ad cum maiores dolorem, omnis eligendi illo modi quisquam
+            magnam et autem est facilis maxime quasi tenetur perferendis
+            praesentium? Autem asperiores quidem nostrum ab nesciunt doloribus
+            numquam fugit beatae cumque excepturi, nulla, modi cum eum sequi
+            dolorem mollitia doloremque. Aperiam placeat ullam dolor accusantium
+            cum, nesciunt, veniam, iste ea sit repudiandae adipisci.
+          </p>
+
+          <div class="d-flex align-items-center mt-5">
+            <button type="button" class="btn btn-black me-4 rounded-5 ps-4 pe-4">contact</button>
+            <a href="./public/img/cv.pdf" class="me-2 fw-semibold">download CV</a>
+            <i class="fa-solid fa-download"></i>
+          </div>
+
+            <div class="d-flex align-item-center mt-5 gap-4 justify-content-center justify-content-md-start sosmed" style="font-size: 2rem;">
+              <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+          
+        </div>
+        <div class="col-7 col-md-3 card p-0 mt-5 mt-md-0" style="width: clamp;">
+          <img src="./public/img/profile.jpg" class="card-img-top" alt="profile">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold m-0">Tommy Marcelino Hidayat</h5>
+            <p class="card-text">Junior Fullstack Developer</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- end profile  -->
+
+    <!-- project  -->
+    <div class="shadow d-flex justify-content-center align-items-center flex-column bg-project mt-5 pb-5">
+      <h2 class="text-center fw-bolder mb-5 mt-5">My Project</h2>
+      <div class="container row p-0 pe-2 ps-2">
+        
+        {{ range $index, $data := .Projects }}
+        <div class="col-6 col-md-4 p-lg-3 p-1 d-flex justify-content-center align-content-center">
+          <div class="card p-3 d-flex justify-content-between" style="width: 100%;">
+            <div class="card-body p-0 card-project">
+                <img src="http://localhost:5000/uploads/{{$data.Image}}" height="250" class="card-img-top mb-3" alt="profile" style="object-fit: cover;">
+                <a href="./detail/{{ $data.Id }}" class="card-title fw-bold m-0 fs-4">{{ $data.Title }}</a>
+                <p class="card-text bg-subtitle">Duration : {{ $data.Duration }}</p>
+                <p class="fw-semibold lh-2">{{ $data.Content }}</p>
+              </div>
+              <div>
+                <div class="tech d-flex justify-content-start align-items-center gap-lg-4 gap-2 mt-2 flex-wrap">
+                  {{range $index, $data := $data.Technologies}}
+                  <h2><i class="fa-brands fa-{{ $data }}"></i></h2>
+                  {{ end }}
+                </div>
+                
+                {{ if $.Data.IsLogin }}
+                <div class="d-flex justify-content-evenly mt-4 gap-1">
+                  <a href="/update/{{$data.Id}}" class="btn-black text-center rounded-2 fw-semibold p-1" style="width: 100%;">update</a>
+                  <a href="/delete/{{$data.Id}}" class="btn-black text-center rounded-2 fw-semibold p-1" style="width: 100%;" onclick="return confirm('You are going to delete {{ $data.Title }} Project?')">delete</a>
+                </div>
+                {{ else }}
+                {{ end }}
+              </div>
+          </div>
+        </div>
+        {{ end }}
+        
+      </div>
+    </div>
+    <!-- end project  -->
+
+    <!-- link bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+go get golang.org/x/crypto/bcrypt
+go get github.com/gorilla/sessions

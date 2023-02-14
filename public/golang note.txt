@@ -1,0 +1,30 @@
+init = go mod init personal
+framework = go get -u github.com/gorilla/mux
+buat file = main.go
+running = go run .
+
+membuat variable
+  var project
+  project :=
+
+shortcut func ketikan hand
+
+Map adalah tipe data khusus yang bisa menyimpan banyak nilai dalam 
+satu variabel. Setiap nilai dalam map memiliki key dan value. 
+Key adalah identifier yang digunakan untuk mengakses nilai 
+tersebut, sedangkan value adalah nilai yang ingin disimpan. 
+Tipe data interface{} berarti bahwa value dalam map bisa menyimpan 
+berbagai tipe data seperti integer, string, atau bahkan objek lain.
+
+pointer golang * (asterik) => refrensi alamat memori
+Pointer adalah sebuah alamat yang menunjukkan suatu objek dalam 
+memori. Dalam bahasa pemrograman Go, pointer menunjukkan alamat 
+suatu variabel. Pointer digunakan untuk mempermudah manipulasi 
+data pada suatu objek, seperti membaca, mengubah, atau menghapus 
+isi dari objek tersebut. Pointer dalam Go ditandai dengan tanda " * "
+
+Query
+QueryRow => 1 baris data sesuai kondisi yang dikirimkan
+Exec => mengeksekusi untuk CRUD data
+
+Context Background => tetap berjalan dan selalu terkonek kedatabase

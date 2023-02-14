@@ -1,0 +1,19 @@
+konsep basic db relation
+1 one to one => 1 baris untuk 1 baris
+2 one to many => 1 baris untuk 1 table
+3 many to many => 1 table untuk table lainnya
+
+sql join
+inner join => menampilkan data yang memiliki pasangan (matching data) dalam kedua tabel.
+full join => menampilkan semua data dari kedua tabel, baik yang memiliki pasangan maupun tidak.
+left join => menampilkan semua data dari tabel kiri (left table) dan data yang memiliki pasangan dari tabel kanan (right table).
+right join => menampilkan semua data dari tabel kanan dan data yang memiliki pasangan dari tabel kiri.
+
+key table
+primary key => kunci utama => sebagai identitas utama dari setiap record dalam tabel tersebut.
+foreign key => kunci cadangan => untuk membuat relasi antar tabel
+
+left join => 
+SELECT tb_projects.id, project_name, start_date, end_date, description, image, technologies, tb_users.name as user
+FROM tb_projects
+LEFT JOIN tb_users ON tb_projects.users_id = tb_users.id ORDER BY id DESC

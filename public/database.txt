@@ -1,0 +1,11 @@
+pgadmin 4 = postgree
+
+Primary Key dan Foreign Key adalah konsep dasar dalam pemodelan database relasional.
+
+Primary Key adalah kolom atau kombinasi kolom yang memiliki nilai unik dan membedakan setiap baris dalam tabel. Primary Key digunakan sebagai referensi utama dalam suatu tabel dan tidak boleh ada nilai duplikat.
+
+Foreign Key adalah kolom atau kombinasi kolom dalam tabel yang merujuk pada Primary Key dari tabel lain. Foreign Key digunakan untuk membuat relasi antar tabel dan memastikan integritas data. Misalnya, jika kita memiliki tabel "Pengguna" dengan Primary Key "IDPengguna" dan tabel "Transaksi" dengan Foreign Key "IDPengguna", ini menunjukkan bahwa setiap baris dalam tabel "Transaksi" terkait dengan satu baris dalam tabel "Pengguna" melalui kolom "IDPengguna".
+
+microservice = membuat lebih dari 1 database
+
+cloudinary = menyimpan data gambar

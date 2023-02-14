@@ -1,0 +1,8 @@
+session => Session adalah cara untuk mengingat siapa yang sedang login di website atau aplikasi. Misalnya kalau kita login ke sebuah website, 
+kita tidak perlu login lagi setiap kali membuka halaman baru. Ini karena website mengingat kalau kita sudah login sebelumnya menggunakan session.
+
+Cookies => adalah kecil file yang disimpan di komputer kamu ketika kamu mengunjungi situs web. Cookies digunakan untuk mengingat informasi 
+tentang kamu, seperti preferensi dan aktivitasmu di situs tersebut. Ini membantu situs web untuk memberikan kamu pengalaman yang lebih baik.
+
+
+go get -u github.com/gorilla/sessions

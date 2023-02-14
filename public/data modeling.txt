@@ -1,0 +1,14 @@
+DDL, DML, DDL, and TCL adalah singkatan dari beberapa terminologi database:
+
+DDL (Data Definition Language) adalah bagian dari bahasa pemrograman yang digunakan untuk menentukan definisi dari database, termasuk membuat tabel, menambahkan kolom, memodifikasi tabel dan menghapus tabel.
+
+DML (Data Manipulation Language) adalah bagian dari bahasa pemrograman yang digunakan untuk mengolah data, seperti memasukkan data baru, memperbarui data yang sudah ada, dan menghapus data.
+
+DCL (Data Control Language) adalah bagian dari bahasa pemrograman yang digunakan untuk membatasi akses data, seperti memberikan atau mencabut hak akses untuk mengolah data.
+
+TCL (Transaction Control Language) adalah bagian dari bahasa pemrograman yang digunakan untuk mengendalikan transaksi, seperti memulai, mengakhiri, dan membatalkan transaksi.
+
+
+DBMS adalah singkatan dari Database Management System. DBMS adalah suatu software yang membantu membuat, memanipulasi, dan memelihara data dalam suatu database. DBMS memastikan integritas dan konsistensi data, dan memudahkan bagi pengguna untuk mengakses dan mengelola data dengan mudah dan efisien.
+
+pgadmin 4 = postgree
